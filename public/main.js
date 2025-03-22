@@ -3,7 +3,9 @@ document.querySelector("button").addEventListener("click", apiRequest);
 async function apiRequest() {
   const pokemonName = document.querySelector("input").value;
   try {
-    const response = await fetch(`localhost:8000/api/${pokemonName}`);
+    const response = await fetch(
+      `https://meek-peony-139fa4.netlify.app/${pokemonName}`
+    );
     const data = await response.json();
 
     console.log(data);
